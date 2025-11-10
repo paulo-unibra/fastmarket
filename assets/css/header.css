@@ -79,14 +79,14 @@ nav ul li a:hover {
     text-align: right;
 }
 
-/* Mobile responsive */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 0;
-    }
-    
-    nav ul li {
-        width: 100%;
-    }
+.cart {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+}
+
+.cart a {
+    color: #333;
+    text-decoration: none;
 }
