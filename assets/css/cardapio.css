@@ -1,0 +1,75 @@
+.cardapio {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+}
+
+.card-produto {
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    background-color: #fff;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-produto:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); 
+}
+
+.card-produto .card-img-top {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    height: 180px; /*ALTURA FIXA PRA DEIXAR OS CARDS ALINHASDO */
+    object-fit: cover; 
+}
+
+.card-produto .card-body {
+    flex-grow: 1; 
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.card-produto .card-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+}
+
+.card-produto .card-text {
+    font-size: 0.9rem;
+    color: #777;
+    flex-grow: 1; 
+    margin-bottom: 1rem;
+}
+
+.card-produto .preco {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.card-produto .btn-adicionar-carrinho {
+    background-color: #EA1D2C;
+    color: white;
+    font-weight: bold;
+    border: none;
+    width: 100%;
+    padding: 0.75rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.card-produto .btn-adicionar-carrinho:hover {
+    background-color: #c81a25; 
+}
+
+.card-produto .btn-adicionar-carrinho:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

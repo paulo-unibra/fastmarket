@@ -9,6 +9,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/promocoes.css">
+    <link rel="stylesheet" href="assets/css/cardapio.css">
 </head>
 
 <body>
@@ -69,6 +70,21 @@
         </div>
     </section>
 
+    <main class="container my-5">
+        <h2 class="mb-4">Nosso Cardápio</h2>
+        <div id="lista-produtos" class="row gy-4">
+
+            <!---loading pra req ajax-->
+            <div class="col-12 text-center" id="indicador-carregamento">
+                <div class="spinner-border text-danger" role="status">
+                    <span class="visually-hidden">Carregando...</span>
+                </div>
+                <p class="mt-2">Carregando cardápio...</p>
+            </div>
+
+        </div>
+    </main>
+
     <script>
         function scrollCarousel(direction) {
             const carousel = document.querySelector('.carousel-scroll');
@@ -88,6 +104,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
+    <script src="assets/js/cardapio.js"></script>
 </body>
 
 </html>
