@@ -1,0 +1,83 @@
+.offcanvas-footer {
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    background-color: #fff;
+}
+
+.carrinho-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.carrinho-item-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 1rem;
+}
+
+.carrinho-item-info {
+    flex-grow: 1;
+}
+
+.carrinho-item-info h6 {
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+
+.carrinho-item-info .text-muted {
+    font-size: 0.9rem;
+}
+
+.carrinho-item-controles {
+    display: flex;
+    align-items: center;
+}
+
+.carrinho-item-controles .input-group {
+    max-width: 100px;
+    margin-right: 1rem;
+}
+
+.carrinho-item-controles .form-control {
+    font-size: 0.9rem;
+    padding: 0.2rem 0.5rem;
+    height: auto;
+}
+
+.carrinho-item-controles .btn {
+    font-size: 0.8rem;
+    padding: 0.2rem 0.6rem;
+}
+
+.btn-remover-item {
+    color: #dc3545;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+}
+
+.subtotal-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#btn-finalizar-pedido {
+    width: 100%;
+    padding: 0.75rem;
+    font-weight: bold;
+    background-color: #28a745;
+    border-color: #28a745;
+}
+
+#btn-finalizar-pedido:hover {
+    background-color: #218838;
+    border-color: #1e7e34;
+}

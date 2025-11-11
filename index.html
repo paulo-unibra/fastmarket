@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/promocoes.css">
     <link rel="stylesheet" href="assets/css/cardapio.css">
+    <link rel="stylesheet" href="assets/css/modal-produto.css">
+    <link rel="stylesheet" href="assets/css/carrinho.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
 <body>
@@ -31,7 +34,7 @@
         </div>
 
         <div class="cart">
-            <a href="#">Carrinho (0)</a>
+            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#carrinhoOffcanvas">Carrinho (0)</a>
         </div>
     </header>
 
@@ -85,6 +88,81 @@
         </div>
     </main>
 
+
+
+    <!--MODAL DO DATALHE DOS PRODUTOS INICIO-->
+    <div class="modal fade" id="produtoModal" tabindex="-1" aria-labelledby="produtoModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered"> <!-- MODAL MAIOR -->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="modalProdutoNome">Nome do Produto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-lg-5">
+                            <img id="modalProdutoImagem" src="" class="img-fluid" alt="Imagem do Produto">
+                        </div>
+
+                        <div class="col-lg-7">
+                            <p id="modalProdutoDescricao">Descrição completa do produto.</p>
+
+                            <div id="container-selo"></div>
+
+                            <div class="info-adicional">
+                                <span id="container-tempo-preparo"></span>
+                                <span id="container-calorias"></span>
+                            </div>
+
+                            <div id="container-alergenos"></div>
+
+                            <p class="preco fs-2 mt-3" id="modalProdutoPreco">R$ 0,00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+
+                    <div class="input-group quantidade-stepper">
+                        <button class="btn btn-outline-secondary" type="button" id="btn-diminuir-qtd">-</button>
+                        <input type="text" id="input-quantidade" class="form-control text-center" value="1" readonly>
+                        <button class="btn btn-outline-secondary" type="button" id="btn-aumentar-qtd">+</button>
+                    </div>
+
+                    <button type="button" class="btn btn-danger" id="btn-adicionar-com-preco">
+                        Adicionar R$ 0,00
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--MODAL DO DATALHE DOS PRODUTOS FIM-->
+
+    
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoOffcanvas" aria-labelledby="carrinhoOffcanvasLabel">
+        
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="carrinhoOffcanvasLabel">Meu Carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        
+        <div class="offcanvas-body">
+            <div id="carrinho-itens-container"></div>
+
+            <div id="carrinho-vazio-mensagem" class="text-center d-none">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+        </div>
+
+        <div class="offcanvas-footer" id="carrinho-footer">
+            <div class="subtotal-container">
+                <span>Subtotal</span>
+                <span id="subtotal-carrinho">R$ 0,00</span>
+            </div>
+            <button class="btn btn-success" id="btn-finalizar-pedido">Finalizar Pedido</button>
+        </div>
+    </div>
+
     <script>
         function scrollCarousel(direction) {
             const carousel = document.querySelector('.carousel-scroll');
@@ -104,7 +182,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-
     <script src="assets/js/cardapio.js"></script>
 </body>
 

@@ -1,0 +1,93 @@
+#produtoModal .modal-content {
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+}
+
+#produtoModal .modal-header {
+    border-bottom: none;
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+#produtoModal .modal-header .btn-close {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 50%;
+    z-index: 10;
+}
+
+#produtoModal .modal-body {
+    padding: 1rem 1.5rem 1.5rem;
+}
+
+#produtoModal #modalProdutoImagem {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+}
+
+#produtoModal .selo-dietetico {
+    display: inline-block;
+    padding: 4px 10px;
+    background-color: #e4f8e4;
+    color: #28a745;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+#produtoModal .info-adicional {
+    font-size: 0.9rem;
+    color: #6c757d;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 1rem;
+}
+
+#produtoModal .info-adicional span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+#produtoModal .info-alergenos {
+    font-size: 0.85rem;
+    color: #6c757d; 
+    margin-top: 1rem;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef; 
+    border-radius: 4px;
+}
+
+#produtoModal .modal-footer {
+    border-top: 1px solid #dee2e6;
+    padding: 1rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#produtoModal .quantidade-stepper {
+    max-width: 140px;
+}
+
+#btn-adicionar-com-preco {
+    background-color: #EA1D2C;
+    border-color: #EA1D2C;
+    font-weight: bold;
+    flex-grow: 1;
+    margin-left: 1rem;
+    padding: 12px 20px;
+}
+
+#btn-adicionar-com-preco:hover {
+    background-color: #c81a25;
+    border-color: #c81a25;
+}
