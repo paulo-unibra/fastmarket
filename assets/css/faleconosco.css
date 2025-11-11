@@ -1,0 +1,18 @@
+#fale-conosco h2 {
+    color: #d32f2f;
+    font-weight: 700;
+}
+
+#fale-conosco .form-control:focus {
+    border-color: #d32f2f;
+    box-shadow: 0 0 0 0.2rem rgba(211, 47, 47, 0.25);
+}
+
+#fale-conosco button {
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+#fale-conosco button:hover {
+    transform: scale(1.03);
+    background-color: #b71c1c;
+}
