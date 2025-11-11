@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
         produtos.forEach(produto => {
             const semEstoque = produto.estoque === 0;
             const cardHTML = `
-               <div class="col-12 col-md-6 col-lg-3 d-flex align-items-stretch">
+               <div class="col-6 col-md-6 col-lg-3 d-flex align-items-stretch">
                     <div class="card card-produto w-100 ${semEstoque ? 'disabled' : ''}" 
                          style="${semEstoque ? 'cursor: not-allowed; opacity: 0.7;' : 'cursor: pointer;'}"
                          ${semEstoque ? '' : `data-bs-toggle="modal" data-bs-target="#produtoModal" data-produto-id="${produto.id}"`}>
