@@ -21,10 +21,18 @@
 <body>
     <header class="cabecalho">
         <div class="box--left">
+            <!-- Botão Hambúrguer -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Fastmarket Logo">
             </div>
-            <nav>
+            
+            <nav id="mainNav">
                 <ul>
                     <li><a href="#">Início</a></li>
                     <li><a href="#">Contatos</a></li>
@@ -41,7 +49,7 @@
         </div>
     </header>
 
-    <section class="container promocoes">
+    <section class="container promocoes" style="padding: 10px;">
         <h2>Promoções da Semana</h2>
         
         <div class="promocoes__carrousel">
@@ -66,7 +74,7 @@
         </div>
     </section>
 
-    <main class="container my-5">
+    <section class="container my-5">
         <h2 class="mb-4">Nosso Cardápio</h2>
         <div id="lista-produtos" class="row gy-4">
 
@@ -79,7 +87,7 @@
             </div>
 
         </div>
-    </main>
+    </section>
 
 
 
@@ -175,34 +183,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
-    <script src="assets/js/cardapio.js"></script>
-
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
 
-    <script>
-        $(document).ready(function () {
-            $('.promocoes__carrousel').slick({
-                centerMode: true,
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                // autoplay: true,
-                // autoplaySpeed: 2000,
-                dots: false,
-                arrows: false,
-                responsive: [
-                    {
-                        breakpoint: 992,
-                        settings: {
-                            slidesToShow: 2
-                        }
-                    },
-                
-                ]
-            });
-        });
-    </script>
-
-
+    <script src="assets/js/menu.js"></script>
+    <script src="assets/js/cardapio.js"></script>
+    <script src="assets/js/promocoes.js"></script>
 </body>
-
 </html>
