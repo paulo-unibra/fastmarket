@@ -13,6 +13,9 @@
     <link rel="stylesheet" href="assets/css/modal-produto.css">
     <link rel="stylesheet" href="assets/css/carrinho.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
 </head>
 
 <body>
@@ -38,38 +41,28 @@
         </div>
     </header>
 
-    <section class="promocoes">
+    <section class="container promocoes">
         <h2>Promoções da Semana</h2>
-
-        <div class="carousel-container">
-            <button class="carousel-btn carousel-btn-prev" onclick="scrollCarousel(-1)">
-                <span>‹</span>
-            </button>
-
-            <div class="carousel-scroll">
-                <div class="promo-card">
-                    <img src="assets/img/promocoes/promocao1.png" alt="Promoção 1">
-                </div>
-                <div class="promo-card">
-                    <img src="assets/img/promocoes/promocao2.png" alt="Promoção 2">
-                </div>
-                <div class="promo-card">
-                    <img src="assets/img/promocoes/promocao3.png" alt="Promoção 3">
-                </div>
-                <div class="promo-card">
-                    <img src="assets/img/promocoes/promocao4.png" alt="Promoção 4">
-                </div>
-                <div class="promo-card">
-                    <img src="assets/img/promocoes/promocao5.png" alt="Promoção 5">
-                </div>
-                <div class="promo-card">
-                    <img src="assets/img/promocoes/promocao6.png" alt="Promoção 6">
-                </div>
+        
+        <div class="promocoes__carrousel">
+            <div class="carrousel_img">
+                 <div class="img" style="background: url('assets/img/promocoes/promocao1.png'); background-size: cover; background-position: center;"></div>
             </div>
-
-            <button class="carousel-btn carousel-btn-next" onclick="scrollCarousel(1)">
-                <span>›</span>
-            </button>
+            <div class="carrousel_img">
+                 <div class="img" style="background: url('assets/img/promocoes/promocao2.png'); background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="carrousel_img">
+                 <div class="img" style="background: url('assets/img/promocoes/promocao3.png'); background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="carrousel_img">
+                 <div class="img" style="background: url('assets/img/promocoes/promocao4.png'); background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="carrousel_img">
+                 <div class="img" style="background: url('assets/img/promocoes/promocao5.png'); background-size: cover; background-position: center;"></div>
+            </div>
+            <div class="carrousel_img">
+                 <div class="img" style="background: url('assets/img/promocoes/promocao6.png'); background-size: cover; background-position: center;"></div>
+            </div>
         </div>
     </section>
 
@@ -138,14 +131,14 @@
     </div>
     <!--MODAL DO DATALHE DOS PRODUTOS FIM-->
 
-    
+
     <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoOffcanvas" aria-labelledby="carrinhoOffcanvasLabel">
-        
+
         <div class="offcanvas-header border-bottom">
             <h5 class="offcanvas-title" id="carrinhoOffcanvasLabel">Meu Carrinho</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
-        
+
         <div class="offcanvas-body">
             <div id="carrinho-itens-container"></div>
 
@@ -163,7 +156,7 @@
         </div>
     </div>
 
-    <script>
+    <!-- <script>
         function scrollCarousel(direction) {
             const carousel = document.querySelector('.carousel-scroll');
             const cardWidth = carousel.querySelector('.promo-card').offsetWidth;
@@ -175,7 +168,7 @@
                 behavior: 'smooth'
             });
         }
-    </script>
+    </script> -->
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -183,6 +176,33 @@
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
     <script src="assets/js/cardapio.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $('.promocoes__carrousel').slick({
+                centerMode: true,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                // autoplay: true,
+                // autoplaySpeed: 2000,
+                dots: false,
+                arrows: false,
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    },
+                
+                ]
+            });
+        });
+    </script>
+
+
 </body>
 
 </html>
