@@ -1,63 +1,122 @@
 <!doctype html>
-</div>
-</section>
+
+<html>
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fastmarket</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/header.css">
+    <link rel="stylesheet" href="assets/css/promocoes.css">
+    <link rel="stylesheet" href="assets/css/cardapio.css">
+    <link rel="stylesheet" href="assets/css/modal-produto.css">
+    <link rel="stylesheet" href="assets/css/carrinho.css">
+    <link rel="stylesheet" href="assets/css/faleconosco.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+</head>   
+<body>
+<header class="cabecalho">
+        <div class="box--left">
+            <!-- Botão Hambúrguer -->
+            <button class="menu-toggle" id="menuToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="logo">
+                <img src="/assets/img/logo.png" alt="Fastmarket Logo">
+            </div>
+
+            <nav id="mainNav">
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="contactus.html">Contatos</a></li>
+                    <li><a href="about.html">Sobre Nós</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="box-center">
+            <input type="text" placeholder="Pesquisar...">
+        </div>
+
+        <div class="cart">
+            <a href="#" data-bs-toggle="offcanvas" data-bs-target="#carrinhoOffcanvas">Carrinho (0)</a>
+        </div>
+    </header>
 
 
 <section id="equipe" style="margin-top:24px">
-<h2>Nossa Equipe</h2>
-<p style="color:var(--muted)">Nossa equipe apaixonada faz o melhor para que seu pedido chegue fresquinho e saboroso até você.</p>
+    <h2>Nossa Equipe</h2>
+    <p style="color:var(--muted)">Nossa equipe apaixonada faz o melhor para que seu pedido chegue fresquinho e saboroso
+        até você.</p>
 
 
-<div class="team" style="margin-top:12px">
+    <div class="team" style="margin-top:12px">
 
-<article class="member">
-<h3>Alexandre Magno</h3>
-<p>Gestor de Delivery / Gerente de Operações</p>
-<p style="font-size:13px; color:var(--muted); margin-top:8px">Responsável pela coordenação geral de todos os processos de entrega.</p>
-</article>
-<article class="member">
-<img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/455937455_2010694049447338_2233350246019468720_n.jpg?ccb=11-4&oh=01_Q5Aa3AGPksTFLVAe1KYGLTYwIjnkjAOMOCm7JuCSZlBatX78RQ&oe=6920C652&_nc_sid=5e03e0&_nc_cat=109" width="300" height="200" alt="Alexandre Magno — Chefe de Cozinha">
+        <article class="member">
+            <h3>Alexandre Magno</h3>
+            <p>Gestor de Delivery / Gerente de Operações</p>
+            <p style="font-size:13px; color:var(--muted); margin-top:8px">Responsável pela coordenação geral de todos os
+                processos de entrega.</p>
+        </article>
+        <article class="member">
+            <img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/455937455_2010694049447338_2233350246019468720_n.jpg?ccb=11-4&oh=01_Q5Aa3AGPksTFLVAe1KYGLTYwIjnkjAOMOCm7JuCSZlBatX78RQ&oe=6920C652&_nc_sid=5e03e0&_nc_cat=109"
+                width="300" height="200" alt="Alexandre Magno — Chefe de Cozinha">
 
-<h3>Diogo Alves</h3>
-<p>Profissional de Logística / Roteirização</p>
-<p style="font-size:13px; color:var(--muted); margin-top:8px">Auxilia no planejamento e otimização das rotas de entrega para garantir eficiência e custos acessíveis.</p>
-</article>
-<article class="member">
-<img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/543112179_1562130211811899_7992868906661173623_n.jpg?ccb=11-4&oh=01_Q5Aa3AHd4uocAh2KPjAjKFeKBueD4AzjxJCypco18JlyW8cSQA&oe=6920D85A&_nc_sid=5e03e0&_nc_cat=110" width="300" height="200" alt="Foto de Diogo Alves — Chefe de Cozinha">
+            <h3>Diogo Alves</h3>
+            <p>Profissional de Logística / Roteirização</p>
+            <p style="font-size:13px; color:var(--muted); margin-top:8px">Auxilia no planejamento e otimização das rotas
+                de entrega para garantir eficiência e custos acessíveis.</p>
+        </article>
+        <article class="member">
+            <img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/543112179_1562130211811899_7992868906661173623_n.jpg?ccb=11-4&oh=01_Q5Aa3AHd4uocAh2KPjAjKFeKBueD4AzjxJCypco18JlyW8cSQA&oe=6920D85A&_nc_sid=5e03e0&_nc_cat=110"
+                width="300" height="200" alt="Foto de Diogo Alves — Chefe de Cozinha">
 
-<h3>Paulo Ricardo</h3>
-<p>Desenvolvedor de Sistemas </p>
-<p style="font-size:13px; color:var(--muted); margin-top:8px">Mantêm e gerencia as plataformas tecnológicas utilizadas para pedidos, rastreamento e gestão de entregas.
-</article>
-<article class="member">
-<img src="blob:https://web.whatsapp.com/56040c79-db23-44cd-b31e-ee1ed8cff874"width="300" height="200" alt="Paulo Ricardo — Desenvolvedor de Sistemas">
+            <h3>Paulo Ricardo</h3>
+            <p>Desenvolvedor de Sistemas </p>
+            <p style="font-size:13px; color:var(--muted); margin-top:8px">Mantêm e gerencia as plataformas tecnológicas
+                utilizadas para pedidos, rastreamento e gestão de entregas.
+        </article>
+        <article class="member">
+            <img src="assets\img\paulo.jfif" width="300" height="200"
+                alt="Paulo Ricardo — Desenvolvedor de Sistemas">
 
-<h3>Caio Fernando</h3>
-<p>Operador de Pedidos</p>
-<p style="font-size:13px; color:var(--muted); margin-top:8px">Recebe e processa os pedidos dos clientes, seja por telefone, aplicativos ou outras plataformas digitais.</p>
-</article>
-<article class="member">
-<img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/573254977_1387657239364695_6961991203323616877_n.jpg?ccb=11-4&oh=01_Q5Aa3AHioV-Tj94ebuNUkj3tQYpti3Jk8Y4y2CAujyGDg5u2KQ&oe=6920C94E&_nc_sid=5e03e0&_nc_cat=111" width="300" height="200" alt="Foto de Carlos — Entregador">
+            <h3>Caio Fernando</h3>
+            <p>Operador de Pedidos</p>
+            <p style="font-size:13px; color:var(--muted); margin-top:8px">Recebe e processa os pedidos dos clientes,
+                seja por telefone, aplicativos ou outras plataformas digitais.</p>
+        </article>
+        <article class="member">
+            <img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/573254977_1387657239364695_6961991203323616877_n.jpg?ccb=11-4&oh=01_Q5Aa3AHioV-Tj94ebuNUkj3tQYpti3Jk8Y4y2CAujyGDg5u2KQ&oe=6920C94E&_nc_sid=5e03e0&_nc_cat=111"
+                width="300" height="200" alt="Foto de Carlos — Entregador">
 
-<h3>Vinicius Barbosa</h3>
-<p>Logística & Delivery</p>
-<p style="font-size:13px; color:var(--muted); margin-top:8px">Responsável por garantir entregas rápidas e seguras.</p>
-</article>
-<article class="member"></article>
-<img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/507861699_690404397486896_6505822325043795139_n.jpg?ccb=11-4&oh=01_Q5Aa3AE9MTE7ItYfQKZ6KacTCuQ4CnZYOhItiHH4oYuu2lOUgw&oe=6920BEC5&_nc_sid=5e03e0&_nc_cat=102" width="300" height="200" alt="Foto de Carlos — Entregador">
- </p>
- </p>
+            <h3>Vinicius Barbosa</h3>
+            <p>Logística & Delivery</p>
+            <p style="font-size:13px; color:var(--muted); margin-top:8px">Responsável por garantir entregas rápidas e
+                seguras.</p>
+        </article>
+        <article class="member"></article>
+        <img src="https://media-for2-1.cdn.whatsapp.net/v/t61.24694-24/507861699_690404397486896_6505822325043795139_n.jpg?ccb=11-4&oh=01_Q5Aa3AE9MTE7ItYfQKZ6KacTCuQ4CnZYOhItiHH4oYuu2lOUgw&oe=6920BEC5&_nc_sid=5e03e0&_nc_cat=102"
+            width="300" height="200" alt="Foto de Carlos — Entregador">
+        </p>
+        </p>
 
-</div>
+    </div>
 </section>
 
 
 <footer>
-<div class="container footer-inner">
-<div style="font-size:14px">© <strong>[Fastmarket]</strong> — Todos os direitos reservados</div>
-<div style="margin-left:auto; color:var(--muted)">Feito com ❤️ para a comunidade</div>
-</div>
+    <div class="container footer-inner">
+        <div style="font-size:14px">© <strong>[Fastmarket]</strong> — Todos os direitos reservados</div>
+        <div style="margin-left:auto; color:var(--muted)">Feito com ❤️ para a comunidade</div>
+    </div>
 </footer>
 
 </body>
+
 </html>
