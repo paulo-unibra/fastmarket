@@ -104,6 +104,31 @@
             </div>
         </div>
     </section>
+
+    <!-- Modal do Carrinho -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoOffcanvas" aria-labelledby="carrinhoOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="carrinhoOffcanvasLabel">Meu Carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div id="carrinho-itens-container"></div>
+
+            <div id="carrinho-vazio-mensagem" class="text-center d-none">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+        </div>
+
+        <div class="offcanvas-footer" id="carrinho-footer">
+            <div class="subtotal-container">
+                <span>Subtotal</span>
+                <span id="subtotal-carrinho">R$ 0,00</span>
+            </div>
+            <button class="btn btn-success" id="btn-finalizar-pedido">Finalizar Pedido</button>
+        </div>
+    </div>
+
     <footer>
         <div class="container footer-inner">
             <div style="font-size:14px">© <strong>Fastmarket</strong> — Todos os direitos reservados</div>

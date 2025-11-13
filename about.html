@@ -9,6 +9,7 @@
         integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/header.css">
     <link rel="stylesheet" href="assets/css/about.css">
+    <link rel="stylesheet" href="assets/css/carrinho.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 
@@ -91,6 +92,30 @@
             </article>
         </div>
     </section>
+
+    <!-- Modal do Carrinho -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="carrinhoOffcanvas" aria-labelledby="carrinhoOffcanvasLabel">
+        <div class="offcanvas-header border-bottom">
+            <h5 class="offcanvas-title" id="carrinhoOffcanvasLabel">Meu Carrinho</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+
+        <div class="offcanvas-body">
+            <div id="carrinho-itens-container"></div>
+
+            <div id="carrinho-vazio-mensagem" class="text-center d-none">
+                <p>Seu carrinho está vazio.</p>
+            </div>
+        </div>
+
+        <div class="offcanvas-footer" id="carrinho-footer">
+            <div class="subtotal-container">
+                <span>Subtotal</span>
+                <span id="subtotal-carrinho">R$ 0,00</span>
+            </div>
+            <button class="btn btn-success" id="btn-finalizar-pedido">Finalizar Pedido</button>
+        </div>
+    </div>
 
     <footer>
         <div class="container footer-inner">
