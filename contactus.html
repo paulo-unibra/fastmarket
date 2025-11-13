@@ -17,6 +17,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css">
+    <link rel="stylesheet" href="assets/css/about.css">
 </head>
 
 <body>
@@ -28,11 +29,11 @@
                 <span></span>
                 <span></span>
             </button>
-            
+
             <div class="logo">
                 <img src="/assets/img/logo.png" alt="Fastmarket Logo">
             </div>
-            
+
             <nav id="mainNav">
                 <ul>
                     <li><a href="index.html">Início</a></li>
@@ -51,54 +52,64 @@
     </header>
 
 
-    <section class="container my-5" id="fale-conosco">
-    <h2 class="mb-4 text-center fw-bold">Fale Conosco</h2>
+    <section class="container my-5 vh-100" id="fale-conosco">
+        <h2 class="mb-4 text-center fw-bold">Fale Conosco</h2>
 
-    <div class="row g-4 align-items-start">
-        <!-- Formulário -->
-        <div class="col-lg-6">
-            <form class="p-4 border rounded shadow-sm bg-light">
-                <div class="mb-3">
-                    <label for="nome" class="form-label">Nome</label>
-                    <input type="text" class="form-control" id="nome" placeholder="Seu nome completo" required>
-                </div>
+        <div class="row g-4 align-items-start">
+            <!-- Formulário -->
+            <div class="col-lg-6">
+                <form class="p-4 border rounded shadow-sm bg-light">
+                    <div class="mb-3">
+                        <label for="nome" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="nome" placeholder="Seu nome completo" required>
+                    </div>
 
-                <div class="mb-3">
-                    <label for="email" class="form-label">E-mail</label>
-                    <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
-                </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">E-mail</label>
+                        <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" required>
+                    </div>
 
-                <div class="mb-3">
-                    <label for="mensagem" class="form-label">Mensagem</label>
-                    <textarea class="form-control" id="mensagem" rows="5" placeholder="Digite sua mensagem..." required></textarea>
-                </div>
+                    <div class="mb-3">
+                        <label for="mensagem" class="form-label">Mensagem</label>
+                        <textarea class="form-control" id="mensagem" rows="5" placeholder="Digite sua mensagem..."
+                            required></textarea>
+                    </div>
 
-                <button type="submit" class="btn btn-danger w-100">
-                    <i class="bi bi-send-fill me-2"></i>Enviar Mensagem
-                </button>
-            </form>
-        </div>
+                    <button type="submit" class="btn btn-danger w-100">
+                        <i class="bi bi-send-fill me-2"></i>Enviar Mensagem
+                    </button>
+                </form>
+            </div>
 
-        <!-- Informações de contato -->
-        <div class="col-lg-6">
-            <div class="p-4 border rounded shadow-sm bg-light h-100">
-                <h5 class="fw-bold mb-3">Informações de Contato</h5>
+            <!-- Informações de contato -->
+            <div class="col-lg-6">
+                <div class="p-4 border rounded shadow-sm bg-light h-100">
+                    <h5 class="fw-bold mb-3">Informações de Contato</h5>
 
-                <p><i class="bi bi-telephone-fill text-danger me-2"></i><strong>Telefone:</strong> (81) 99999-9999</p>
-                <p><i class="bi bi-envelope-fill text-danger me-2"></i><strong>E-mail:</strong> contato@fastmarket.com</p>
-                <p><i class="bi bi-geo-alt-fill text-danger me-2"></i><strong>Endereço:</strong> Av. Dantas Barreto, 123 — Recife/PE</p>
+                    <p><i class="bi bi-telephone-fill text-danger me-2"></i><strong>Telefone:</strong> (81) 99999-9999
+                    </p>
+                    <p><i class="bi bi-envelope-fill text-danger me-2"></i><strong>E-mail:</strong>
+                        contato@fastmarket.com</p>
+                    <p><i class="bi bi-geo-alt-fill text-danger me-2"></i><strong>Endereço:</strong> Av. Dantas Barreto,
+                        123 — Recife/PE</p>
 
-                <hr>
+                    <hr>
 
-                <p class="text-muted mb-0">
+                    <p class="text-muted mb-0">
                     <h5 class="Funcionamento"><strong>Horário de Atendimento:</strong></h5>
                     <strong>Seg a Sáb:</strong> 08h às 22h<br>
                     <strong>Domingos e feriados:</strong> 09h às 18h
-                </p>
+                    </p>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
+    <footer>
+        <div class="container footer-inner">
+            <div style="font-size:14px">© <strong>Fastmarket</strong> — Todos os direitos reservados</div>
+            <div style="margin-left:auto; color:#aaa">Feito com ❤️ para a comunidade</div>
+        </div>
+    </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -111,4 +122,5 @@
     <script src="assets/js/cardapio.js"></script>
     <script src="assets/js/promocoes.js"></script>
 </body>
+
 </html>

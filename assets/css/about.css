@@ -1,0 +1,178 @@
+/* Estilos da página Sobre Nós */
+#equipe {
+    background-color: #f7f7f7;
+    padding: 40px 0;
+    min-height: calc(100vh - 200px);
+}
+
+#equipe h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#equipe > p {
+    text-align: center;
+    color: #777;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.team {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.member {
+    background-color: #fff;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s ease-in-out, transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.member img {
+    width: 100%;
+    max-width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+    border: 3px solid #EA1D2C;
+}
+
+.member h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.member p:first-of-type {
+    font-size: 0.95rem;
+    color: #EA1D2C;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.member p:last-of-type {
+    font-size: 0.85rem;
+    color: #777;
+    line-height: 1.5;
+    margin-top: 0.5rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 2rem 0;
+    margin-top: auto;
+}
+
+.footer-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+footer strong {
+    color: #EA1D2C;
+}
+
+/* Responsivo - Tablets */
+@media (max-width: 992px) {
+    .team {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+    
+    #equipe h2 {
+        font-size: 1.75rem;
+    }
+}
+
+/* Responsivo - Mobile */
+@media (max-width: 768px) {
+    #equipe {
+        padding: 30px 0;
+    }
+    
+    .team {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+    
+    #equipe h2 {
+        font-size: 1.5rem;
+    }
+    
+    .member {
+        padding: 1.25rem;
+    }
+    
+    .member img {
+        max-width: 180px;
+        height: 180px;
+    }
+    
+    .footer-inner {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .footer-inner > div:last-child {
+        margin-left: 0 !important;
+    }
+}
+
+/* Mobile pequeno */
+@media (max-width: 480px) {
+    #equipe {
+        padding: 20px 0;
+    }
+    
+    #equipe h2 {
+        font-size: 1.35rem;
+    }
+    
+    #equipe > p {
+        font-size: 0.9rem;
+        padding: 0 1rem;
+    }
+    
+    .member {
+        padding: 1rem;
+    }
+    
+    .member img {
+        max-width: 150px;
+        height: 150px;
+    }
+    
+    .member h3 {
+        font-size: 1.1rem;
+    }
+}
