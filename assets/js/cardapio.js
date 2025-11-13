@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector('.cart a').textContent = `Carrinho (${totalItens})`;
     }
 
- 
+
     function renderizarCarrinho() {
         const carrinho = JSON.parse(localStorage.getItem('carrinhoFastmarket')) || [];
         carrinhoItensContainer.innerHTML = '';
@@ -30,8 +30,8 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        carrinhoVazioMsg.classList.add('d-none'); 
-        carrinhoFooter.classList.remove('d-none'); 
+        carrinhoVazioMsg.classList.add('d-none');
+        carrinhoFooter.classList.remove('d-none');
 
         let subtotal = 0;
         carrinho.forEach(item => {
@@ -75,7 +75,7 @@ document.addEventListener("DOMContentLoaded", function () {
         renderizarCarrinho();
         produtoModal.hide();
     }
-    
+
     function removerDoCarrinho(produtoId) {
         let carrinho = JSON.parse(localStorage.getItem('carrinhoFastmarket')) || [];
         carrinho = carrinho.filter(item => item.id !== produtoId);
@@ -215,7 +215,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     //botoes do carrinho
-    carrinhoItensContainer.addEventListener('click', function(event) {
+    carrinhoItensContainer.addEventListener('click', function (event) {
         const target = event.target.closest('button');
         if (!target) return;
 
@@ -232,7 +232,44 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
+
+    document.getElementById('btn-finalizar-pedido').addEventListener('click', function () {
+        const numeroWhatsapp = '558192162971';
+
+        const carrinho = JSON.parse(localStorage.getItem('carrinhoFastmarket')) || [];
+
+        if (carrinho.length === 0) {
+            alert("Seu carrinho está vazio!");
+            return;
+        }
+
+        let subtotal = 0;
+        let mensagem = 'Olá! Gostaria de fazer o seguinte pedido:\n\n';
+
+        carrinho.forEach(item => {
+            const itemTotal = item.preco * item.quantidade;
+            subtotal += itemTotal;
+            mensagem += `*${item.quantidade}x* - ${item.nome}\n`;
+            mensagem += `  Preço: ${item.preco.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}\n\n`;
+        });
+        mensagem += `*Subtotal do Pedido: ${subtotal.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' })}*`;
+
+        const mensagemCodificada = encodeURIComponent(mensagem);
+
+        const urlWhatsapp = `https://wa.me/${numeroWhatsapp}?text=${mensagemCodificada}`;
+        localStorage.removeItem('carrinhoFastmarket');
+
+        atualizarContadorCarrinho();
+        renderizarCarrinho();
+
+        window.open(urlWhatsapp, '_blank');
+
+        //FECHAR O CARRINHO
+        const carrinhoOffcanvas = bootstrap.Offcanvas.getInstance(document.getElementById('carrinhoOffcanvas'));
+        carrinhoOffcanvas.hide();
+    });
+
     atualizarContadorCarrinho();
-    renderizarCarrinho(); 
+    renderizarCarrinho();
     carregarCardapio();
 });
